@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <h3>你好！</h3>
+    <p>请使用 <strong>企业微信</strong> 客户端进行扫码授权</p>
+    <p>Auth Code Sample.</p>
+    <div id="qr_login"></div>
+
+</body>
+<script src="http://wwcdn.weixin.qq.com/node/wework/wwopen/js/wwLogin-1.2.4.js"></script>
+  <script>
+    var url = 'http://xzdz.yinhaiyun.com/houtai/redirect';
+
+    var wwLogin = new WwLogin({
+        "id": "qr_login",
+        "appid": "<%= corpid %>",
+        "agentid": "<%= agentid %>",
+        "redirect_uri": encodeURI(url),
+        "state": "hellowecom",
+        "href": "",
+        "lang": "zh",
+});
+  </script>
+</html>
